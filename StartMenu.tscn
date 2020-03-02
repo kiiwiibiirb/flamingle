@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/startmenu_bg.png" type="Texture" id=2]
+
+[node name="StartMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1151.0
+margin_bottom = 635.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 470.0
+margin_top = 170.0
+margin_right = 553.0
+margin_bottom = 430.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 83.0
+margin_bottom = 14.0
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 83.0
+margin_bottom = 32.0
+
+[node name="Label3" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 83.0
+margin_bottom = 50.0
+
+[node name="Label4" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 54.0
+margin_right = 83.0
+margin_bottom = 68.0
+
+[node name="Label5" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 83.0
+margin_bottom = 86.0
+
+[node name="Label6" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 90.0
+margin_right = 83.0
+margin_bottom = 104.0
+
+[node name="Label7" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 108.0
+margin_right = 83.0
+margin_bottom = 122.0
+
+[node name="Label8" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 83.0
+margin_bottom = 140.0
+
+[node name="Label9" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 83.0
+margin_bottom = 158.0
+
+[node name="Label10" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 162.0
+margin_right = 83.0
+margin_bottom = 176.0
+
+[node name="Label11" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 180.0
+margin_right = 83.0
+margin_bottom = 194.0
+
+[node name="Label12" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 198.0
+margin_right = 83.0
+margin_bottom = 212.0
+
+[node name="Start" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 216.0
+margin_right = 83.0
+margin_bottom = 236.0
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 240.0
+margin_right = 83.0
+margin_bottom = 260.0
+text = "Quit Game"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
