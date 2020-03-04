@@ -27,7 +27,7 @@ func _physics_process(delta):
 	else:
 		if friction == true:
 			motion.x = lerp(motion.x, 0, 0.05)
-		if Input.is_action_just_pressed("jump"):
+		elif Input.is_action_just_pressed("jump"):
 			motion.y = JUMP_HEIGHT
 	
 	if Input.is_action_just_pressed("quit"):
